@@ -22,9 +22,11 @@ sup { font-size: 0.7em; vertical-align: super; line-height: 0; }
 .publication-affiliations sup { margin-right: 0.15em; }
 .author-notes { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 1.25rem; margin-top: 0.75rem; font-size: 0.82rem; color: #6b7280; }
 .teaser { padding-top: 0.75rem; padding-bottom: 1.25rem; }
-.teaser-pdf { display: block; width: 100%; aspect-ratio: 788 / 379.333313; border: 0; background: #fff; }
+.teaser-pdf { position: relative; width: 100%; aspect-ratio: 788 / 379.333313; border: 0; background: #fff; }
+.teaser-canvas { display: block; width: 100%; height: auto; border: 0; box-shadow: none; }
+.teaser-canvas[hidden], .pdf-status[hidden] { display: none; }
+.pdf-status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #737a84; }
 .teaser figcaption { margin-top: 1rem; font-size: 0.94rem; line-height: 1.65; text-align: left; color: #555c66; }
-.figure-link { margin-top: 0.55rem; text-align: right; font-size: 0.85rem; }
 a { color: #217bbd; }
 a:hover { color: #16537f; text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--apm-blue); outline-offset: 4px; }

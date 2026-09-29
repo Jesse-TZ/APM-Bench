@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <script type="module" src="./static/js/pdf-figure.mjs"></script>
 </head>
 <body>
 <header class="hero publication-header">
@@ -61,13 +62,14 @@
 <section class="section teaser" aria-label="APM-Bench overview">
   <div class="container is-max-desktop">
     <figure>
-      <object class="teaser-pdf" data="./static/images/teaser.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=FitH" type="application/pdf" aria-label="APM-Bench teaser: persistent memory across interrupted interactions">
-        <p>Your browser cannot display this PDF inline. <a href="./static/images/teaser.pdf" target="_blank" rel="noopener">Open the teaser PDF</a>.</p>
-      </object>
+      <div class="teaser-pdf" data-pdf="./static/images/teaser.pdf" aria-busy="true">
+        <canvas class="teaser-canvas" role="img" aria-label="APM-Bench teaser: persistent memory across interrupted interactions" hidden></canvas>
+        <p class="pdf-status" role="status">Loading teaser…</p>
+        <noscript><p class="pdf-status">Enable JavaScript to view the teaser.</p></noscript>
+      </div>
       <figcaption>
         In a streaming setting, once an interaction ends, the model can no longer directly access its visual stream because real-world interactions are not replayed; the assistant therefore needs persistent memory to retain prior experience. Across sessions, the assistant updates and reuses persistent memory for cross-session understanding and proactive assistance while continuing real-time perception. The example shows repeated collaborative dessert-making across multiple sessions.
       </figcaption>
-      <p class="figure-link"><a href="./static/images/teaser.pdf" target="_blank" rel="noopener">Open teaser PDF ↗</a></p>
     </figure>
   </div>
 </section>
