@@ -3,84 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Website</title>
-
+  <title>APM-Bench | Persistent Memory for Streaming Video Assistants</title>
+  <meta name="description" content="APM-Bench evaluates cross-session persistent memory for real-world egocentric streaming video assistants across utility, latency, and storage.">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<section class="hero">
+<header class="hero publication-header">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Project Title</h1>
-          <div class="is-size-5 publication-authors">
-            <!-- Add authors here. -->
+          <h1 class="title publication-title">
+            <span class="project-name"><span class="apm-a">A</span><span class="apm-p">P</span><span class="apm-m">M</span>-Bench</span>
+            <span class="project-subtitle">Benchmarking cross-Session Persistent Memory for<br class="desktop-break"> Real-World Egocentric Streaming Video Assistants</span>
+          </h1>
+          <div class="publication-authors">
+            <div class="author-row">
+              <span class="author-block">Jianguo Huang<sup>1,2,*</sup></span>
+              <span class="author-block">Jinming Liu<sup>1,2,*</sup></span>
+              <span class="author-block">Qiyao Wang<sup>3</sup></span>
+              <span class="author-block">Liang Xu<sup>1,2</sup></span>
+              <span class="author-block">Jianhang Li<sup>4</sup></span>
+              <span class="author-block">Zhimian Wen<sup>2</sup></span>
+            </div>
+            <div class="author-row">
+              <span class="author-block">Mingda Li<sup>4</sup></span>
+              <span class="author-block">Shule Lu<sup>5</sup></span>
+              <span class="author-block">Zhicheng Wang<sup>2,6</sup></span>
+              <span class="author-block">Yuhan Guo<sup>1,2</sup></span>
+              <span class="author-block">Xin Jin<sup>2</sup></span>
+              <span class="author-block">Wenjun Zeng<sup>2,†</sup></span>
+            </div>
           </div>
-          <div class="is-size-5 publication-authors">
-            <!-- Add affiliations here. -->
+          <div class="publication-affiliations">
+            <div class="affiliation-row">
+              <span><sup>1</sup>Shanghai Jiao Tong University</span>
+              <span><sup>2</sup>Eastern Institute of Technology, Ningbo</span>
+            </div>
+            <div class="affiliation-row">
+              <span><sup>3</sup>Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</span>
+            </div>
+            <div class="affiliation-row">
+              <span><sup>4</sup>Dalian University of Technology</span>
+              <span><sup>5</sup>Beihang University</span>
+              <span><sup>6</sup>Hong Kong Polytechnic University</span>
+            </div>
           </div>
-          <div class="publication-links">
-            <!-- Add paper, code, and dataset links here. -->
-          </div>
+          <p class="author-notes"><span>* Equal contribution.</span><span>† Corresponding author.</span></p>
         </div>
       </div>
     </div>
   </div>
+</header>
+<main>
+<section class="section teaser" aria-label="APM-Bench overview">
+  <div class="container is-max-desktop">
+    <figure>
+      <object class="teaser-pdf" data="./static/images/teaser.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=FitH" type="application/pdf" aria-label="APM-Bench teaser: persistent memory across interrupted interactions">
+        <p>Your browser cannot display this PDF inline. <a href="./static/images/teaser.pdf" target="_blank" rel="noopener">Open the teaser PDF</a>.</p>
+      </object>
+      <figcaption>
+        In a streaming setting, once an interaction ends, the model can no longer directly access its visual stream because real-world interactions are not replayed; the assistant therefore needs persistent memory to retain prior experience. Across sessions, the assistant updates and reuses persistent memory for cross-session understanding and proactive assistance while continuing real-time perception. The example shows repeated collaborative dessert-making across multiple sessions.
+      </figcaption>
+      <p class="figure-link"><a href="./static/images/teaser.pdf" target="_blank" rel="noopener">Open teaser PDF ↗</a></p>
+    </figure>
+  </div>
 </section>
-
-<!-- Add teaser images or videos here when available. -->
-
 <section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column abstract-column">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- Add the project abstract here. -->
+        <div class="content abstract-text">
+          <p>To serve as real-world personal assistants, streaming video models need persistent memory that retains past experiences for later use. Yet existing streaming benchmarks and methods often focus on individual continuous videos or short clips, overlooking that real-world interactions are often intermittent and require memory to persist across interruptions.</p>
+          <p>To fill this gap, we introduce APM-Bench, which reformulates real-world streaming interaction as multi-session life trajectories. It contains 549 sessions, 104 trajectories, and 2,719 candidates, spanning both objective and open-ended questions. Each session is a video with fine-grained annotations, and sessions within a trajectory revolve around related activities. Models then use persistent memory to answer questions about past sessions and provide proactive responses while maintaining real-time interaction. This raises challenges: persistent memory must be storable, selectively retain information, be injected at the right time, and remain efficient. Moreover, finite storage may leave required evidence unavailable, so assistants should recognize missing evidence. Therefore, we systematically evaluate general video models under different memory protocols and diverse specialized streaming memory systems, and test whether models acknowledge insufficient evidence. Our evaluation reveals a clear utility–latency–storage trade-off: existing methods still struggle to simultaneously achieve reliable long-term recall, low overhead, and effective proactive assistance across sessions. APM-Bench provides a comprehensive testbed for developing and comparing persistent memory systems under realistic streaming conditions. We hope it encourages future work that jointly considers utility, latency, and storage toward more practical persistent memory for real-world streaming assistants.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section" id="results">
-  <div class="container is-max-desktop content">
-    <h2 class="title is-3">Results</h2>
-    <!-- Add results and demonstrations here. -->
-  </div>
-</section>
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title is-3">BibTeX</h2>
-    <!-- Add the project citation here. -->
-  </div>
-</section>
-
+</main>
 <footer class="footer">
   <div class="container is-max-desktop content has-text-centered">
-    <p>
-      Website template adapted from
-      <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
-      licensed under
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-    </p>
+    <p>Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
   </div>
 </footer>
-
 </body>
 </html>
