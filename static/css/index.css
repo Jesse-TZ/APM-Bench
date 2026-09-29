@@ -21,6 +21,9 @@ sup { font-size: 0.7em; vertical-align: super; line-height: 0; }
 .publication-affiliations { margin-top: 1rem; font-size: 0.93rem; line-height: 1.85; color: #555c66; }
 .publication-affiliations sup { margin-right: 0.15em; }
 .author-notes { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 1.25rem; margin-top: 0.75rem; font-size: 0.82rem; color: #6b7280; }
+.publication-links { display: flex; justify-content: center; margin-top: 1.25rem; }
+.publication-links .button { text-decoration: none; }
+.publication-links .icon svg { width: 1.2rem; height: 1.2rem; }
 .teaser { padding-top: 0.75rem; padding-bottom: 1.25rem; }
 .teaser-pdf { display: block; width: 100%; aspect-ratio: 788 / 379.333313; border: 0; background: #fff; }
 .teaser figcaption { margin-top: 1rem; font-size: 0.94rem; line-height: 1.65; text-align: left; color: #555c66; }
