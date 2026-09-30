@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="28" viewBox="0 0 128 28" role="img" aria-label="Hugging Face Dataset">
+  <title>Hugging Face Dataset</title>
+  <rect width="30" height="28" fill="#555"/>
+  <rect x="30" width="98" height="28" fill="#FDF3D9"/>
+  <text x="15" y="18.5" text-anchor="middle" fill="#fff" font-family="Verdana, Arial, sans-serif" font-size="11" font-weight="bold">HF</text>
+  <text x="79" y="18.5" text-anchor="middle" fill="#333" font-family="Verdana, Arial, sans-serif" font-size="14">Dataset</text>
+</svg>

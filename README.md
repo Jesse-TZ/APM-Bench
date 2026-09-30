@@ -10,9 +10,11 @@
   <a href="https://arxiv.org/pdf/2609.37559">
     <img src="assets/paper.svg" alt="Paper (PDF)">
   </a>
+  &nbsp;&nbsp;
+  <a href="https://huggingface.co/datasets/Jianguo-Huang11/APM-Bench">
+    <img src="assets/dataset.svg" alt="Hugging Face Dataset">
+  </a>
 </p>
-
-Code is being organized and will release soon.😊
 
 ![APM-Bench teaser: persistent memory across intermittent, activity-related video sessions.](assets/teaser.png)
 
